@@ -360,9 +360,7 @@ android {
         def brand = names.get(0)
         def platform = names.get(1)
         def isRelease = variant.buildType.name.equals('release')
-        if (isRelease &&
-                ((brand.equals("agencyX") && platform.equals("amazon")) ||
-                        (brand.equals("agencyY") && platform.equals("amazon")) )) {
+        if (brand.equals("agencyX") || brand.equals("agencyY") || brand.equals("yrt") ) {
             variant.setIgnore(true)
         }
     }
